@@ -20,6 +20,7 @@
                 Maximum="100" />
             <TextBlock Text="Tip" />
             <TextBlock Text="{Binding Tip}" />
+            <Button Content="Navigate to Map" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding NavigateToMapViewCommand}"/>
         </StackPanel>
     </Grid>
 </views:MvxWindowsPage>
