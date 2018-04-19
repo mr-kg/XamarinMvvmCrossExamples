@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.Navigation;
+using MvvmCross.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XamNativeShowcase.Services;
 
-namespace XamNativeShowcase.ViewModels
+namespace XamNativeShowcase.Shared.ViewModels
 {
     public class TipViewModel : MvxViewModel
     {
@@ -23,6 +24,16 @@ namespace XamNativeShowcase.ViewModels
             _generosity = 10;
             Recalculate();
             base.Start();
+        }
+
+        public IMvxCommand NavigateToMapViewCommand
+        {
+            get { return new MvxCommand(NavigateToMapView); }
+        }
+
+        private void NavigateToMapView()
+        {
+            ShowViewModel<MapViewModel>();
         }
 
         double _subTotal;

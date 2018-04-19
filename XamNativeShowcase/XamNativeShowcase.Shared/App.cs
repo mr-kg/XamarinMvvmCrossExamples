@@ -6,8 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XamNativeShowcase.Services;
-using XamNativeShowcase.ViewModels;
-
+using XamNativeShowcase.Shared.ViewModels;
 namespace XamNativeShowcase
 {
     public class App : MvxApplication

@@ -13,7 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamNativeShowcase.Uwp", "Xa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Targets", "Targets", "{AC12C5CB-7BCA-438B-90D4-A24D65F01CE3}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamNativeShowcase.Shared", "XamNativeShowcase.Shared\XamNativeShowcase.Shared.shproj", "{3958F138-DEB3-4349-9B7B-CC07FDCCBDCC}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		XamNativeShowcase.Shared\XamNativeShowcase.Shared.projitems*{3958f138-deb3-4349-9b7b-cc07fdccbdcc}*SharedItemsImports = 13
+		XamNativeShowcase.Shared\XamNativeShowcase.Shared.projitems*{c1de3119-8c17-4921-9c92-afde59ad35bf}*SharedItemsImports = 4
+		XamNativeShowcase.Shared\XamNativeShowcase.Shared.projitems*{d8510765-e83e-4102-bfa2-97c7ea074176}*SharedItemsImports = 4
+		XamNativeShowcase.Shared\XamNativeShowcase.Shared.projitems*{f1f44b82-1f3e-4682-ac15-061ee0df2201}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM

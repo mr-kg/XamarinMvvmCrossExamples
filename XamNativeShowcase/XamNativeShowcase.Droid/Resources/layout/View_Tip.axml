@@ -38,4 +38,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         local:MvxBind="Text Tip" />
+    <Button
+        android:text="Navigate to Map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        local:MvxBind="Click NavigateToMapViewCommand"/>
 </LinearLayout>
