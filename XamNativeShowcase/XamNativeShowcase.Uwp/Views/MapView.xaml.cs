@@ -1,4 +1,5 @@
-﻿using MvvmCross.Uwp.Views;
+﻿using Esri.ArcGISRuntime.UI;
+using MvvmCross.Uwp.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,8 @@ namespace XamNativeShowcase.Uwp.Views
             try
             {
                 this.InitializeComponent();
+                MyMapView.LocationDisplay.IsEnabled = true;
+                MyMapView.LocationDisplay.AutoPanMode = LocationDisplayAutoPanMode.Off;
             }
             catch (Exception ex)
             {

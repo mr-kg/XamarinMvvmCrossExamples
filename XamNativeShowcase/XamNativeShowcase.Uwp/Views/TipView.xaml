@@ -22,6 +22,7 @@
             <TextBlock Text="{Binding Tip}" />
             <Button Content="Navigate to Map" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding NavigateToMapViewCommand}"/>
             <Button Content="Navigate to SignalR" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding NavigateToSignalRCommand}"/>
+            <Button Content="Open File" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </views:MvxWindowsPage>

@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.1" />
     <PackageReference Include="MvvmCross.Core" Version="5.7.0" />
     <PackageReference Include="MvvmCross.Platform" Version="5.7.0" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

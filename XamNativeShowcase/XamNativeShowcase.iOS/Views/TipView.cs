@@ -3,6 +3,7 @@ using MvvmCross.iOS.Views;
 using System;
 
 using UIKit;
+using XamNativeShowcase.Core.ViewModels;
 using XamNativeShowcase.ViewModels;
 
 namespace XamNativeShowcase.iOS.Views
