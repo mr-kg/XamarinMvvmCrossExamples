@@ -7,8 +7,9 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
-namespace XamNativeShowcase.iOS.Views
+namespace XamNativeShowcase.iOS
 {
     [Register ("TipView")]
     partial class TipView

@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace XamNativeShowcase.Core.ViewModels

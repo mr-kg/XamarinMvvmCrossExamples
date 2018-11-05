@@ -1,23 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Platform;
+﻿using MvvmCross.Platforms.Android.Core;
+using MvvmCross.ViewModels;
 
 namespace XamNativeShowcase.Droid
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAndroidSetup<App>
     {
-        public Setup(Context applicationContext)
-        : base(applicationContext)
+        public Setup()
         {
         }
 

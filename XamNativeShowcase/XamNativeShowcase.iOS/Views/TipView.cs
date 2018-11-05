@@ -1,38 +1,27 @@
 ﻿using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
+using MvvmCross.Platforms.Ios.Views;
 using System;
+using XamNativeShowcase.Core.ViewModels;
 
-using UIKit;
-using XamNativeShowcase.ViewModels;
-
-namespace XamNativeShowcase.iOS.Views
+namespace XamNativeShowcase.iOS
 {
+    [MvxFromStoryboard("TipView")]
     public partial class TipView : MvxViewController<TipViewModel>
     {
-        public TipView() : base("TipView", null)
+        public TipView(IntPtr handle) : base(handle)
         {
-        }
-
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-
-            // Release any cached data, images, etc that aren't in use.
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            // Perform any additional setup after loading the view, typically from a nib.
-            this.CreateBinding(TipLabel).To((TipViewModel vm) => vm.Tip).Apply();
-            this.CreateBinding(SubTotalTextField).To((TipViewModel vm) => vm.SubTotal).Apply();
-            this.CreateBinding(GenerositySlider).To((TipViewModel vm) => vm.Generosity).Apply();
-
-            // Resign first responder
-            View.AddGestureRecognizer(new UITapGestureRecognizer(() => {
-                this.SubTotalTextField.ResignFirstResponder();
-            }));
+            var set = this.CreateBindingSet<TipView, TipViewModel>();
+            set.Bind(TipLabel).To(vm => vm.Tip);
+            set.Bind(SubTotalTextField).To(vm => vm.SubTotal);
+            set.Bind(GenerositySlider).To(vm => vm.Generosity);
+            set.Apply();
         }
+
     }
 }
