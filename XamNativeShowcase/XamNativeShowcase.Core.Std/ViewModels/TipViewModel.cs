@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MvvmCross;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 using XamNativeShowcase.Services;
 
 namespace XamNativeShowcase.Core.ViewModels
@@ -13,6 +9,7 @@ namespace XamNativeShowcase.Core.ViewModels
     public class TipViewModel : MvxViewModel
     {
         readonly ICalculation _calculation;
+        private IMvxNavigationService NavigationService => Mvx.IoCProvider.Resolve<IMvxNavigationService>();
 
         public TipViewModel(ICalculation calculation)
         {
@@ -39,12 +36,12 @@ namespace XamNativeShowcase.Core.ViewModels
 
         private void NavigateToMapView()
         {
-            ShowViewModel<MapViewModel>();
+            NavigationService.Navigate<MapViewModel>();
         }
 
         private void NavigateToSignalR()
         {
-            ShowViewModel<SignalRViewModel>();
+            NavigationService.Navigate<SignalRViewModel>();
         }
 
         double _subTotal;

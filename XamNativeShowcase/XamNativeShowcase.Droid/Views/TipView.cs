@@ -1,5 +1,5 @@
 ﻿using Android.App;
-using MvvmCross.Droid.Views;
+using MvvmCross.Platforms.Android.Views;
 
 namespace XamNativeShowcase.Droid.Views
 {
